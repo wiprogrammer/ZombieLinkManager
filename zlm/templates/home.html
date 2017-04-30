@@ -1,0 +1,81 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zombie Link Manager</title>
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+<!-- Latest compiled and minified JavaScript -->
+
+<body>
+
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>{{ title }}</h1>
+           <h3>Free URL Shortener</h3>
+            <p>New Features Coming Soon. Analytics, Edit Links, and Custom Link Trails</p>
+    <form method="post" action=".">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <input type="submit" placeholder="Submit" />
+    </form>
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                </br>
+                    <h4><strong>By: Dominique Randolph</strong>
+                    </h4>
+                    <p>534 North St, Unit 2
+                        <br>Madison, WI 53704</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (920) 277-3598</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:dom@wiprogrammer.com">dom@wiprogrammer.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/dominique-randolph-16559327/"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/wiprogrammer"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                        </li>
+                                                <li>
+                            <a href="http://www.dominiqueportfolio.com"><i class="fa fa-male fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Zlm.IO 2017</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+    <!-- jQuery -->
+    <script src="{%  static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{%  static 'js/bootstrap.min.js' %}"></script>
+
+
+
+        </body>
+</html>
